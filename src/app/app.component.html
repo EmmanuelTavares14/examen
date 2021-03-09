@@ -1,0 +1,8 @@
+<app-alumno *ngIf="aux"></app-alumno>
+
+<div class="row align-items-center">
+  <div class="col-sm-12 text-center">
+      <button class="btn btn-success" (click)="ocultarCards(false)" *ngIf="aux">Ocultar alumnos</button>
+      <button class="btn btn-success" (click)="ocultarCards(true)" *ngIf="!aux">Mostrar alumnos</button>
+  </div>
+</div>

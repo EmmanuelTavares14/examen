@@ -1,0 +1,41 @@
+<div class="row">
+    <div class="col-sm-12 text-center">
+        <h3>Alumnos</h3>
+            <table class="table table-success">
+                <thead>
+                  <tr>
+                    <th scope="col">Id</th>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Apellido paterno</th>
+                    <th scope="col">Apellido materno</th>
+                    <th scope="col">Grupo</th>
+                    <th scope="col">Promedio</th>
+                    <th scope="col">Calificación</th>
+                  </tr>
+                </thead>
+                <tbody *ngFor = "let alumno of alumnos">
+                    <td>
+                        {{alumno.idAlumno}}
+                    </td>
+                    <td>
+                        {{alumno.nombre}}
+                    </td>
+                    <td>
+                        {{alumno.apellidoPaterno}}
+                    </td>
+                    <td>
+                        {{alumno.apellidoMaterno}}
+                    </td>
+                    <td>
+                        {{alumno.grupo}}
+                    </td>
+                    <td>
+                        {{alumno.promedio}}
+                    </td>
+                    <span *ngIf="alumno.promedio<7.5" style="color:brown">¡Reprovado!</span>
+                </tbody>
+            </table>
+    </div>
+</div>
+
+
